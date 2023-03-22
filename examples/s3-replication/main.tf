@@ -25,8 +25,8 @@ provider "aws" {
 locals {
   bucket_name             = "origin-s3-bucket-${random_pet.this.id}"
   destination_bucket_name = "replica-s3-bucket-${random_pet.this.id}"
-  origin_region           = "eu-west-1"
-  replica_region          = "eu-central-1"
+  origin_region           = "us-west-2"
+  replica_region          = "us-east-1"
 }
 
 data "aws_caller_identity" "current" {}
